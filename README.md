@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+An Automatic Timetable Generator is a software application designed to automatically create and manage timetables for schools, colleges, or universities. It eliminates the manual, time-consuming, and error-prone process of scheduling classes by intelligently assigning time slots, teachers, subjects, and classrooms based on constraints and requirements.
 
-## Project info
+🧠 Core Features
+Automated Schedule Generation
+Uses optimization algorithms to allocate:
 
-**URL**: https://lovable.dev/projects/09554dea-0cbe-4626-a4cd-34744ee1e6d4
+Teachers to subjects
 
-## How can I edit this code?
+Subjects to classes
 
-There are several ways of editing your application.
+Rooms and time slots
+All while avoiding conflicts and adhering to constraints.
 
-**Use Lovable**
+Custom Constraints Management
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/09554dea-0cbe-4626-a4cd-34744ee1e6d4) and start prompting.
+Teacher availability (free periods)
 
-Changes made via Lovable will be committed automatically to this repo.
+Preferred teaching slots
 
-**Use your preferred IDE**
+Room capacity and lab requirements
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Maximum number of periods per day
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+No class repetition in the same day
 
-Follow these steps:
+Multi-user Role System
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Admin: Adds teachers, subjects, and sets constraints
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Teachers: View and update their schedules
 
-# Step 3: Install the necessary dependencies.
-npm i
+Students: Access class-wise timetables
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Editable Timetables
 
-**Edit a file directly in GitHub**
+Manual changes allowed post-generation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Drag-and-drop feature for slot adjustments
 
-**Use GitHub Codespaces**
+Conflict Detection & Resolution
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Detects clashes like double bookings
 
-## What technologies are used for this project?
+Suggests alternative slots or auto-resolves
 
-This project is built with:
+Report Generation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+PDF/Excel exports of final timetables
 
-## How can I deploy this project?
+Printable class-wise and teacher-wise schedules
 
-Simply open [Lovable](https://lovable.dev/projects/09554dea-0cbe-4626-a4cd-34744ee1e6d4) and click on Share -> Publish.
+User Interface
 
-## Can I connect a custom domain to my Lovable project?
+Web or desktop-based interface
 
-Yes, you can!
+Easy navigation through days, periods, and classes
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+⚙️ How It Works (Functionality Flow)
+Input Phase
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Admin inputs:
+
+Classes (e.g., 1st Year IT, 2nd Year CSE)
+
+Teachers and their subjects
+
+Subject credit hours/week
+
+Lab vs Theory classes
+
+Room availability
+
+Constraints (teacher leaves, breaks, room types)
+
+Processing Phase
+
+The algorithm (e.g., Genetic Algorithm, Backtracking, Constraint Satisfaction Problem [CSP]) processes all data
+
+Generates optimal combinations minimizing idle periods and avoiding conflicts
+
+Output Phase
+
+Generates:
+
+Class-wise timetable
+
+Teacher-wise timetable
+
+Room-wise timetable
+
+College Timetable Generation:
+
+Department: Information Technology
+
+Classes: IT-I, IT-II, IT-III
+
+Subjects: DBMS, OS, Java, Python, SE
+
+Teachers: 10 faculty members
+
+Constraints:
+
+Each class must have at least 2 lab sessions/week
+
+No teacher has more than 3 consecutive lectures
+
+Rooms: 5 theory + 2 labs
+
+Output: 5-day weekly timetable auto-generated for all classes with no conflicts.
