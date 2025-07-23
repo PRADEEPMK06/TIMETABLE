@@ -105,7 +105,11 @@ Constraints:
       No teacher has more than 3 consecutive lectures
 
 Rooms:       
+
+
       5 theory + 2 labs
 
 Output: 
+
+
       5-day weekly timetable auto-generated for all classes with no conflicts.
