@@ -8,7 +8,7 @@ interface HeroProps {
   onGetStarted: () => void;
 }
 
-export const Hero = ({ onGetStarted }: HeroProps) => {
+const Hero = ({ onGetStarted }: HeroProps) => {
   const navigate = useNavigate();
 
   const features = [
@@ -41,11 +41,9 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-primary-glow/5" />
 
-      {/* Main Content */}
       <div className="relative z-10 w-full flex flex-col items-center justify-center px-4 py-16 sm:py-32">
         <h1 className="text-4xl sm:text-6xl font-extrabold text-center text-primary">
           Automate Your College’s Scheduling
@@ -76,7 +74,7 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-14 w-full max-w-4xl">
-          {features.map((feature, idx) => (
+          {features.map((feature) => (
             <Card
               key={feature.title}
               className="flex flex-col items-center gap-3 py-8 px-4"
@@ -101,3 +99,5 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
     </div>
   );
 };
+
+export default Hero;
