@@ -2,12 +2,15 @@ import { Calendar, Clock, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-image.jpg";
+import { useNavigate } from "react-router-dom";
 
 interface HeroProps {
   onGetStarted: () => void;
 }
 
 export const Hero = ({ onGetStarted }: HeroProps) => {
+  const navigate = useNavigate();
+
   const features = [
     {
       icon: Calendar,
@@ -62,7 +65,12 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
           >
             Get Started
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 py-6">
+          <Button
+            variant="outline"
+            size="lg"
+            className="text-lg px-8 py-6"
+            onClick={() => navigate("/description")}
+          >
             Learn More
           </Button>
         </div>
@@ -84,7 +92,10 @@ export const Hero = ({ onGetStarted }: HeroProps) => {
 
         {/* Developer Info */}
         <div className="mt-8 text-center text-muted-foreground text-sm">
-          {/* Add developer information here if needed */}
+          Developed by <strong>PRADEEP M K</strong> |{" "}
+          <a href="mailto:pradeepmk799@gmail.com" className="underline">pradeepmk799@gmail.com</a>
+          <br />
+          3rd Year B.Tech IT, Sri Shakthi Institute of Engineering and Technology
         </div>
       </div>
     </div>
