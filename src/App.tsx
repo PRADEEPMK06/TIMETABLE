@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Hero from "./Hero"; // Homepage
+import Hero from "./components/dashboard/Hero"; // Use the relative path from src directory
 import DescriptionPage from "./pages/DescriptionPage"; // Description page
 import NotFound from "./pages/NotFound"; // 404 page (you may need to implement this)
 
